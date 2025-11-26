@@ -1,3 +1,11 @@
+module "webserver" {
+    source = "./modules/server"
+    name = "web-server-1"
+    instance_type = "t2.micro"
+}
+
+
+
 locals {
     project_name = "my-terraform-project"
     dynamic_name = "${var.env_name}-${random_string.random.result}"

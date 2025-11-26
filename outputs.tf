@@ -13,3 +13,7 @@ output "eastus_from_list" {
 output "eastus_from_map" {
   value = local.network_map["eastus"]  
 }
+
+output "app_server_ip" {
+  value = module.webserver.public_ip  
+}
