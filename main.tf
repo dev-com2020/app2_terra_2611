@@ -10,7 +10,11 @@ locals {
         "eastus" = "net-b"
         "eastus" = "net-xxx"
     }
+
+    region_names_list = [for r in var.regions : upper(r)]
+    region_array_from_map = [for k, v in var.region_map : "${k}-${v}"]
 }
+
 
 resource "random_string" "random" {
     length =   5
