@@ -24,8 +24,15 @@ resource "random_string" "random" {
     special = true
 }
 
-resource "aws_s3_bucket" "demo" {
-    for_each = toset(range(3))
+# resource "aws_s3_bucket" "demo" {
+#     for_each = toset(range(3))
 
-    bucket = "demo-bucket-${each.key}"
+#     bucket = "demo-bucket-${each.key}"
+# }
+
+resource "template_dir" "init" {
+    destination_dir = "${path.module}/files"
+
+    source_dir = "${path.module}/templates"
 }
+

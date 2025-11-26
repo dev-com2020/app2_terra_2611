@@ -1,5 +1,6 @@
 variable "env_name" {
   type = string
+  description = "The environment name, e.g., dev, prod"
 }
 
 # variable "zmienna1" {
