@@ -8,6 +8,7 @@ locals {
     network_map = {
         "westus" = "net-a"
         "eastus" = "net-b"
+        "eastus" = "net-xxx"
     }
 }
 
