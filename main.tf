@@ -11,8 +11,10 @@ locals {
         "eastus" = "net-xxx"
     }
 
-    region_names_list = [for r in var.regions : upper(r)]
-    region_array_from_map = [for k, v in var.region_map : "${k}-${v}"]
+    tekst = format("Project: %s, Environment: %s", local.project_name, var.env_name)
+
+    # region_names_list = [for r in var.regions : upper(r)]
+    # region_array_from_map = [for k, v in var.region_map : "${k}-${v}"]
 }
 
 
@@ -20,4 +22,10 @@ resource "random_string" "random" {
     length =   5
     upper = false
     special = true
+}
+
+resource "aws_s3_bucket" "demo" {
+    for_each = toset(range(3))
+
+    bucket = "demo-bucket-${each.key}"
 }

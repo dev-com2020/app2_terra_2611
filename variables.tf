@@ -10,13 +10,13 @@ variable "env_name" {
 #   type = bool
 # }
 
-variable "regions" {
-  type = list(any)
-}
+# variable "regions" {
+#   type = list(any)
+# }
 
-variable "region_map" {
-  type = map(any)
-}
+# variable "region_map" {
+#   type = map(any)
+# }
 
 # variable "zmienna5" {
 #   type = object({
