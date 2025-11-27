@@ -1,5 +1,5 @@
 resource "aws_instance" "web_server" {
-  ami           = ""
+  ami           = "ami-0a6793a25df710b06"
   instance_type = "t2.micro"
   security_groups = [aws_security_group.web_server_sg.name]
 
@@ -10,7 +10,7 @@ resource "aws_instance" "web_server" {
               yum install -y httpd
               systemctl start httpd
               systemctl enable httpd
-              echo "<h1>Wdrożono przez Terraform!</h1>" > /var/www/html/index.html
+              echo "<h2>Strona została zaktualizowana :) :)!</h2>" > /var/www/html/index.html
               EOF
 
   tags = {
