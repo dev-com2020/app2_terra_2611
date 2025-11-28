@@ -4,5 +4,6 @@ resource "aws_s3_bucket" "ci_cd_bucket" {
   tags = {
     Name        = "tk_CiCdBucket"
     ManagedBy   = "tk_GitHubActions"
+    version = "1.0.0"
   }
 }
