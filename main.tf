@@ -1,5 +1,5 @@
 resource "aws_s3_bucket" "ci_cd_bucket" {
-  bucket = "tk00-my-terraform-ci-cd-bucket-example" 
+  bucket = "tk000-my-terraform-ci-cd-bucket-example" 
 
   tags = {
     Name        = "tk_CiCdBucket"
