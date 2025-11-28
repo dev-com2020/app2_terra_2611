@@ -3,7 +3,7 @@ resource "aws_s3_bucket" "ci_cd_bucket" {
 
   tags = {
     Name        = "tk_CiCdBucket"
-    ManagedBy   = "tk_GitHubActions"
-    version = "2.1.3"
+    ManagedBy   = "tk_GitHubActions_final"
+    version = "28.1.3"
   }
 }
